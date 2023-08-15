@@ -1,0 +1,405 @@
+
+* {
+    align-items: center;
+    font-family: 'PT Serif', serif;
+    font-size: medium;
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    width: 99.9%;
+
+    /*font-family: 'Montserrat', sans-serif;
+    font-family: 'PT Serif',serif;
+    font-family: 'Quicksand',sans-serif;*/
+}
+
+head {
+    display: none;
+}
+
+
+
+/* SIgn in form CSS*/
+
+form {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    width: 378px;
+    height: 528px;
+    border-radius: 30px;
+    padding-bottom: 10%;
+    background: linear-gradient(180deg, #4BB8F5 0%, rgba(100, 91, 221, 0.15) 99.99%, rgba(75, 92, 245, 0.00) 100%);
+}
+
+.IconFlag {
+    width: 140px;
+    height: 200px;
+    background-image: url(./assets/Yetti.png);
+    background-position: center;
+    background-size: cover;
+    border-radius: 60%;
+    margin-bottom: 10px;
+}
+
+.usernameField  {
+    border: 1px ;
+    width: 290px;
+    height: 60px;
+    border-radius: 25px;
+}
+
+.passwordField {
+    border: 1px;
+    width: 290px;
+    height: 60px;
+    border-radius: 25px;
+}
+
+.SigninButton {
+    background-color: #bd96965e;
+        color: #0e0e11;
+        width: 8.5em;
+        height: 2.9em;
+        border: #3654ff00 0.2em solid;
+        border-radius: 11px;
+        text-align: center;
+        justify-content: center;
+        transition: all 0.6s ease;
+}
+
+.SigninButton:hover {
+    background-color: #3654ff;
+    cursor: pointer;
+}
+
+/* Sales agent Page view*/
+
+.Main_view {
+    
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+    padding: 0;
+    margin-top: 10px;
+    margin-left: 10px;
+    height:600px;
+    }
+  /* Details */
+.Details {
+    grid-area: 1 / 1 / 4 / 5;
+    height: 100%;
+    border-radius: 0px 20px 20px 0px;
+    border: 1px rgb(129, 127, 127) solid;
+}
+
+.Details_nav {
+    border-radius: 0px 20px 0px 0px;
+    background: rgba(100, 68, 227, 0.35);
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+}
+
+.Details_nav h2 {
+    margin-top: 15px;
+    font-family: 'Quicksand', sans-serif;
+    font-size: 30px;
+    color: #000;
+    text-align: center;
+    font-family: Inter;
+    font-size: 24px;
+    font-style: italic;
+    font-weight: 800;
+    line-height: normal;
+}
+ /* Script */ 
+.Script {
+    border: 1px rgb(129, 127, 127) solid;
+    margin-left: 5px;
+    border-radius: 20px 0px 0px 20px;
+    grid-area: 1 / 5 / 5 / 7;
+    height: 100%;
+}
+
+.Script_nav {
+    border-radius: 20px 0px 0px 0px;
+    background: rgba(100, 68, 227, 0.35);
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+
+}
+
+.Script_nav h2 {
+    margin-top: 15px;
+    margin-bottom: 21px;
+    font-family: 'Quicksand', sans-serif;
+    font-size: 30px;
+    color: #000;
+    text-align: center;
+    font-family: Inter;
+    font-size: 24px;
+    font-style: italic;
+    font-weight: 800;
+    line-height: normal;
+}
+
+        /* Notes */
+.Notes {
+    height: 100%;
+    grid-area: 4 / 1 / 6 / 5 ;
+    fill: #FFF;
+    stroke-width: 1px;
+    stroke: #000;
+    box-shadow: 0px 4px 20px 0px rgba(0, 0, 0, 0.25) inset;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+    border: 1px rgb(129, 127, 127) solid;
+    border-radius: 0 20px 0 0;
+}
+
+.Notes_nav {
+    border-radius: 0px 20px 0px 0px;
+    background: rgba(100, 68, 227, 0.35);
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+}
+
+.Notes_nav h2 {
+    margin-top: 15px;
+    margin-bottom: 21px;
+    font-family: 'Quicksand', sans-serif;
+    font-size: 30px;
+    color: #000;
+    text-align: center;
+    font-family: Inter;
+    font-size: 24px;
+    font-style: italic;
+    font-weight: 800;
+    line-height: normal;
+}
+
+.Phone{
+    border: 1px rgb(129, 127, 127) solid;
+    border-radius: 20px 20px 0 20px;
+    height: 100%;
+    grid-area: 5 / 5 / 6 / 7;
+}
+
+
+/* Supervisor View*/
+
+.topnav {
+    background-color: #868ebd;
+    overflow: hidden;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 0 ;
+    padding: 0;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+}
+
+.info {
+    margin-left: 15px;
+    flex-basis: content;
+}
+
+.topnav img {
+    width: 50px;
+    float: left;
+    border-radius: 50%;
+    margin-left: 5px;
+}
+
+.Nav_right {
+    display: flex;
+    flex-direction: row;
+    justify-content:flex-end;
+    align-items: center;
+    margin-left: 10px;
+}
+
+
+
+/* Style the links inside the navigation bar */
+.topnav .Nav_right  a {
+    float: left;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    flex-shrink: 3;
+}
+
+
+/* Change the color of links on hover */
+.topnav  .Nav_right a:hover {
+    background-color: #ddd;
+    color: rgb(40, 34, 128);
+}
+
+/* Add a color to the active/current link */
+.topnav .Nav_right a:active {
+    background-color: #b8c9c2;
+    color: rgb(136, 42, 42);
+}
+
+/* Supervisor View content section*/
+
+/* Sections height to recover with tables height */
+.sup_wrapper {
+    margin-top: 10px;
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    gap: 0;
+    grid-auto-flow: row;
+}
+
+.top_left_sec {
+    grid-area: 1 / 1 / 3 / 4;
+    width: 100%;
+}
+
+
+
+.top_left_sec table{
+display: flex;
+flex-direction: column;
+overflow: hidden;
+justify-content: flex-start;
+align-items: flex-start;
+flex-shrink: 2;
+font-family: 'PT Serif' ,serif;
+max-Width: 100%;
+}
+
+
+.top_left_sec table tr {
+    display: inline-flex;
+    flex-direction: row;
+    align-items: flex-start;
+}
+
+
+.theads:hover {
+box-shadow: 1px 4px 4px 1px rgba(10, 1, 48, 0.25);
+}
+
+.tbody:hover {
+ box-shadow: 0px 4px 4px 0px rgba(10, 1, 48, 0.25);
+}
+
+
+.top_right_sec {
+    grid-area: 1 / 4 / 3 / 7;
+    width: 100%;
+        height: 300px;
+  
+        border: 1px solid red;
+}
+
+.bot_left_sec {
+    grid-area: 3 / 1 / 8 / 4;
+    width: 100%;
+    height: 300px;
+    border: 1px solid red;
+}
+
+.bot_right_sec {
+    grid-area: 3 / 4 / 8 / 7;
+    height: 300px;
+    border: 1px solid red;
+}
+
+.attend_wrapper {
+    margin-top: 10px;
+    width: 100%;
+    height: 300px;
+    box-shadow: 0px -4px 4px 0px rgba(0, 0, 0, 0.25);
+    
+    margin-bottom: 10px;
+}
+
+.attend_title {
+    font-family: 'Quicksand', sans-serif;
+    font-weight: 600;
+    margin-top: 10px;
+    display: block;
+    text-align: center;
+
+}
+
+.attend_input {
+    margin-top: 10px;
+    width: 100%;
+    height: 300px;
+    box-shadow: 0px -4px 4px 0px rgba(0, 0, 0, 0.25);
+    font-family: 'Quicksand', sans-serif;
+}
+
+.justif_input {
+    font-family: 'Quicksand', sans-serif;
+    font-weight: 600;
+    margin-top: 10px;
+    display: block;
+    text-align: center;
+}
+
+.staff_title {
+    font-family: 'Quicksand', sans-serif;
+    font-weight: 600;
+    margin-top: 10px;
+    display: block;
+    text-align: center;
+}
+
+.staff_info * {
+    margin-top: 10px;
+    font-family: 'Quicksand', sans-serif;
+}
+
+.staff_info div {
+    display: flex;
+    flex-direction: row;
+}
+
+.staff_info div label {
+    margin-left: 10px;
+    display: block;
+    justify-content: center;
+    width: 250px
+}
+
+.staff_info div input {
+    display: block;
+    justify-content: center;
+    border: 1px #8b91af solid;
+    border-radius: 5px;
+    height: 30px;
+    width: 400px
+}
+
+.add_staff_btn {
+    width: 150px;
+    background-color: #22232b;
+    height: 1.5em;
+    margin-top: 20px;
+    border-radius: 5px;
+    border: #49c3d8e7;
+    font-size: medium;
+    color: #ddd;
+}
+
+.add_staff_btn:hover {
+    background-color: #6c79db;
+    color: #000;
+}
+
+
+.staff_info div .Start_Time {
+    height: 50px;
+}
+
+.staff_info div .End_Time {
+    height: 50px;
+}
+
