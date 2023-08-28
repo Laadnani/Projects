@@ -26,6 +26,25 @@ const Performance_table = 'SELECT ul.first_name, ul.last_name, ap.agent_id, ap.n
   
   const Get_contacts = ' Select * from contact';
 
+
+  /* GET all Attendece view */
+
+const get_attendence = 'SELECT ul.emp_id, ul.first_name, ul.last_name, att.number_of_worked,	att.number_of_missed from attendence AS att Join usage_right as ul on ul.emp_id = att.id';
+
+
+ /* GET ongoing call nwith name and team */
+
+const ongoing_call = 'Select ur.emp_id, ur.first_name, ur.last_name, ur.team  from usage_right ur join call_log cl on ur.emp_id = cl.agent_id where cl.ongoing = true';
+
+/* Already contacted contatcs */
+
+const contacted = 'Select contact.contact_id, first_name, last_name, call_result from contact join call_log on call_log.contact_id = contact.contact_id';
+
+
+/* Add Staff */
+
+const adding_staff = 'INSERT INTO usage_right (First_Name, Last_Name, Username, Password, Role, CIN, Bank_Details, CNSS, Phone, Email, Start_Time, End_Time)';
+
 module.exports = {
     Call_time,
     Number_of_calls,
@@ -33,5 +52,9 @@ module.exports = {
     Convertion_rate,
     Transfer_rate,
     Performance_table,
-    Get_contacts
+    Get_contacts,
+    get_attendence,
+    ongoing_call,
+    contacted,
+    adding_staff
 }

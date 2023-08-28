@@ -2,7 +2,7 @@
 import { Nav } from "../Components/Navigation"
 import { Sup_content } from "../Components/Sup_content"
 import { Sup_attendence } from "../Components/Sup_attend"
-import { Add_staff } from "../Components/Add_staff"
+import { Add_staff } from "../Components/Add_staffPage"
 import { Routes, Route} from 'react-router-dom'
 
 

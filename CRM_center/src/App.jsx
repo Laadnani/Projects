@@ -4,7 +4,7 @@ import { Denied} from '../Components/denied'
 import { Agent_view } from '../views/main-agent'
 import { Sup_v } from '../views/sup_view'
 import './App.css'
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { BrowserRouter, Routes, Route,} from 'react-router-dom';
 import { Sup_content } from '../Components/Sup_content'
 /* Modification on the elements rendering */
   
@@ -25,6 +25,7 @@ function App() {
       </Route>
        <Route exact path='/Agent/' element={< Agent_view />}></Route>
       <Route path='*' element={< Denied/>}/>
+     
  </Routes>
   )
 }

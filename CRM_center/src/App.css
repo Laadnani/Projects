@@ -23,7 +23,7 @@ head {
 
 /* SIgn in form CSS*/
 
-form {
+.SignIn_Card {
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
@@ -250,15 +250,21 @@ form {
     display: grid;
     grid-template-columns: repeat(6, 1fr);
     grid-template-rows: repeat(4, 1fr);
-    gap: 0;
+    gap: 5px;
     grid-auto-flow: row;
+}
+
+.sup_wrapper h2 {
+
+    margin-top: 25px;
+    margin-bottom: 25px;
 }
 
 .top_left_sec {
     grid-area: 1 / 1 / 3 / 4;
     width: 100%;
+    box-shadow: 1px 4px 4px 1px rgba(113, 112, 121, 0.25);
 }
-
 
 
 .top_left_sec table{
@@ -272,8 +278,30 @@ font-family: 'PT Serif' ,serif;
 max-Width: 100%;
 }
 
+.top_right_sec table {
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-shrink: 2;
+    font-family: 'PT Serif', serif;
+    max-Width: 100%;
+}
 
 .top_left_sec table tr {
+    display: inline-flex;
+    flex-direction: row;
+    align-items: flex-start;
+}
+
+.top_right_sec table tr {
+    display: inline-flex;
+    flex-direction: row;
+    align-items: flex-start;
+}
+
+.bot_left_sec table tr {
     display: inline-flex;
     flex-direction: row;
     align-items: flex-start;
@@ -285,29 +313,30 @@ box-shadow: 1px 4px 4px 1px rgba(10, 1, 48, 0.25);
 }
 
 .tbody:hover {
- box-shadow: 0px 4px 4px 0px rgba(10, 1, 48, 0.25);
+ box-shadow: 1px 4px 4px 1px rgba(10, 1, 48, 0.25);
 }
 
 
 .top_right_sec {
     grid-area: 1 / 4 / 3 / 7;
     width: 100%;
-        height: 300px;
-  
-        border: 1px solid red;
+    height: 300px;
+    box-shadow: 1px 4px 4px 1px rgba(10, 1, 48, 0.25);
 }
 
 .bot_left_sec {
     grid-area: 3 / 1 / 8 / 4;
     width: 100%;
     height: 300px;
-    border: 1px solid red;
+    box-shadow: 1px 4px 4px 1px rgba(10, 1, 48, 0.25);
 }
+
+
 
 .bot_right_sec {
     grid-area: 3 / 4 / 8 / 7;
     height: 300px;
-    border: 1px solid red;
+    box-shadow: 1px 4px 4px 1px rgba(10, 1, 48, 0.25);
 }
 
 .attend_wrapper {
@@ -374,7 +403,7 @@ box-shadow: 1px 4px 4px 1px rgba(10, 1, 48, 0.25);
     justify-content: center;
     border: 1px #8b91af solid;
     border-radius: 5px;
-    height: 30px;
+    height: 50px;
     width: 400px
 }
 
@@ -403,3 +432,18 @@ box-shadow: 1px 4px 4px 1px rgba(10, 1, 48, 0.25);
     height: 50px;
 }
 
+.attendence_sheet {
+    display: flex;
+    flex-direction: column;
+
+}
+
+.attendhead {
+    display: flex;
+    flex-direction: row;
+}
+
+.tbody {
+    display: flex;
+    flex-direction: row;
+}
