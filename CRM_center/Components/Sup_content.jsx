@@ -74,7 +74,7 @@ export function Sup_content() {
                     </thead>
                     <tbody>
                         {performance.map(agent => (
-                            <tr key={agent} className="tbody">
+                            <tr key={agent.agent_id} className="tbody">
                                 <td>{agent.agent_id}</td>
                                 <td>{agent.first_name}</td>
                                 <td>{agent.last_name}</td>
@@ -99,7 +99,7 @@ export function Sup_content() {
                     </thead>
                     <tbody>
                         {ongoingCalls.map(call2 => (
-                            <tr key={call2} className="tbody">
+                            <tr key={call2.emp_id} className="tbody">
                                 <td>{call2.emp_id}</td>
                                 <td>{call2.first_name}</td>
                                 <td>{call2.last_name}</td>

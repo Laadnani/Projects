@@ -71,26 +71,7 @@ app.get('/get_contacted', (req, res) => {
     })
 });
 
-
-
-// Call to register new staff
-// Call to register new staff
-/*app.post('/add', async (req, res) => {
-    try {
-        const quecall = "INSERT INTO usage_right VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13)";
-        const { emp_id, First_Name, Last_Name, Username, _Password, _Role, CIN, Bank_Details, CNSS, Start_Time, End_Time, Phone, Email } = req.body;
-        const values = [emp_id, First_Name, Last_Name, Username, _Password, _Role, CIN, Bank_Details, CNSS, Start_Time, End_Time, Phone, Email];
-
-        console.log("Values entered:", values);
-
-        await pool.query(quecall, values); // Use values directly
-
-        res.status(200).json({ success: true }); // Sending a response to the client
-    } catch (error) {
-        console.error(error.stack);
-        res.status(500).json({ success: false });
-    }
-});*/
+// CALL TO REGISTER NEW STAFF
 
 app.post('/add', async (req, res) => {
     try {
@@ -100,7 +81,7 @@ app.post('/add', async (req, res) => {
 
         console.log("Values entered:", values);
 
-        // Perform database insertion using your query
+        // Perform database insertion using query
         const quecall = "INSERT INTO usage_right VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13)";
         await pool.query(quecall, values);
 
@@ -112,7 +93,17 @@ app.post('/add', async (req, res) => {
 });
 
 
+app.post('/signin',  async (req, res) => {
 
+    try {
+        const { Username, _Password } = req.body;
+        await pool.query('Select * from usage_right WHERE username = $1 AND _password = $2', [Username, _Password]);
+        res.status(200)
+    } catch (error) {
+        if(!error) { console.log('Got an error in the login API call') };
+        console.log(error);
+    } 
+})
 
 
 
